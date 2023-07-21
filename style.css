@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap");
+
+:root {
+  --bg-Color: #1d2021;
+  --container-bg-color: #282828;
+  --white: #fbf1c7;
+  --yellow: #d79921;
+  --blue: #458588;
+}
+
+* {
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-family: "Fira Code", monospace;
+  color: var(--white);
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  row-gap: 2rem;
+  justify-content: center;
+  background-color: var(--bg-Color);
+}
+#placar {
+  font-size: 2rem;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: 1rem;
+  padding: 10px 15px;
+}
+#placar img {
+  width: 2rem;
+}
+#menssage {
+  color: var(--yellow);
+  font-size: 700;
+  column-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#menssage img {
+  width: 1rem;
+}
+#container {
+  display: grid;
+  padding: 10px;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.square {
+  border: 1px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#restart {
+  background-color: transparent;
+  border: 1px solid var(--yellow);
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1.1rem;
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+#restart:hover {
+  scale: 1.1;
+}
+
+@media (max-width: 420px) {
+  #container {
+    width: 17rem;
+    height: 17rem;
+  }
+  #placar {
+    font-size: 1.5rem;
+  }
+  #placar img {
+    width: 1.5rem;
+  }
+}
